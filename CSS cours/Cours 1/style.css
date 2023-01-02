@@ -1,0 +1,183 @@
+/*Fil rouge: selecteur, dimensions, couleurs */
+/* Texte */
+/* Background */
+/*Boxes*/
+/* Positioning */
+/* Flex */
+/* Grid */
+/* Pseudo classe */
+/* Debug*/
+/* Responsive */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+@font-face {
+  font-family: "font-1";
+  src: url(assets/NotoSans-Medium.ttf);
+}
+
+/* POUR TROUVER DES EVENTUELS PROBLEMES */
+/* * {
+  border: 2px red solid;
+} */
+
+body {
+  font-family: "font-1", serif;
+  background: url(./assets/bg.jpg) no-repeat fixed center/cover;
+  height: 100vh;
+}
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  color: rgb(153, 153, 223);
+  text-shadow: 3px 0 0 #1de09f27;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+/* Background positoning */
+
+main {
+  background: rgba(245, 245, 245, 0.952);
+  width: 90%;
+  min-height: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #0e0e4a;
+}
+
+.positioning,
+.flexbox,
+.grid {
+  border: 2px solid skyblue;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/******************Positioning****************/
+
+.positioning {
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+}
+
+#circle {
+  height: 60px;
+  width: 60px;
+  background-color: skyblue;
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: 110px;
+  box-shadow: 0 2px 12px 5px rgb(182, 184, 185);
+  z-index: 1;
+}
+
+#rectangle {
+  height: 15px;
+  width: 100px;
+  background-color: slateblue;
+  padding: 20px;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*********************************/
+
+/***************FLEXBOX***************/
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  font-size: 0.7rem;
+  height: 160px;
+  width: 160px;
+  background: turquoise;
+  /* CENTRER VERTICALEMENT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+/* *****************GRID**************** */
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+}
+
+.img {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+}
+input,
+textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1 rem;
+  font-family: "font-1";
+}
+#firstname {
+  grid-area: i1;
+}
+#surname {
+  grid-area: i2;
+}
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  background-color: cyan;
+  transition: 0.8s;
+}
+input[type="submit"]:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 780px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+}

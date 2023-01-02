@@ -1,0 +1,54 @@
+.section-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .section-container{
+        width: 80%;
+        background: whitesmoke;
+        display: flex;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid rgba(182, 169, 169, 0.656);
+        h3{
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-family: "Inter";
+            padding: 60px 70px 20px ;  
+            position: relative;
+                }
+                h3:before{
+                    position: absolute;
+                    content: "April 24,2017";
+                    top: 30px;
+                    left:50%;
+                    transform: translateX(-50%);
+                    font-size: 0.5rem;
+                    text-transform: none;
+                    font-family: "Merriweather";
+                   
+                }
+         .img2{
+            background: url(../images/pic02.jpg) center/cover;
+            height: 200px;
+            width: 80%;
+            }
+            .img3{
+                background: url(../images/pic03.jpg) center/cover;
+            height: 200px;
+            width: 80%;
+            }
+            p{
+                font-family: "Merriweather";
+                font-size: 0.7rem;
+                line-height: 25px;
+                padding: 20px 30px;
+
+            }
+    }
+}
+
+   

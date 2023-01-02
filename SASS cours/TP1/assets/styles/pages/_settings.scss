@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url(../fonts/Merriweather-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    font-family: "Inter";
+    background: url(../images/bg.jpg) center/cover fixed;
+    
+    a{
+        color: black;
+    }
+
+     .button{
+        text-transform: uppercase;
+        background: transparent;
+        font-family: "Inter";
+        padding: 10px 25px;
+        border: 1px solid black;
+        margin: 30px;
+        font-size: 0.7rem;
+    }
+}
